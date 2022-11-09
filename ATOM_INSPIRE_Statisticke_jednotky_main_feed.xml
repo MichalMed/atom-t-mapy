@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:gmd="http://www.isotc211.org/2005/gmd"
+	xmlns:gco="http://www.isotc211.org/2005/gco"
+	xmlns:gmi="http://standards.iso.org/iso/19115/-2/gmi/1.0"
+	xmlns:gmx="http://www.isotc211.org/2005/gmx"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ows="http://www.opengis.net/ows"
+	xmlns:srv="http://www.isotc211.org/2005/srv" xmlns:georss="http://www.georss.org/georss"
+	xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:php="http://php.net/xsl"
+	xmlns:openSearch="http://a9.com/-/spec/opensearch/1.1/"
+	xmlns:inspire_dls="http://inspire.ec.europa.eu/schemas/inspire_dls/1.0" xml:lang="cs"
+	xsi:schemaLocation="http://www.w3.org/2005/Atom https://inspire-geoportal.ec.europa.eu/schemas/inspire/atom/1.0/atom.xsd">
+	
+	<title xml:lang="cs">Statistické jednotky (ATOM)</title>
+	<subtitle type="html">INSPIRE služba stahování dat (ATOM) obsahuje data pro statistické obvody - nejmenší statistické územní jednotky skladebné do základních sídelních jednotek a katastrálních území, jejichž síť vykrývá celé území České republiky a které slouží k podrobnému popisu území a vytváření statistických zón. Předpřipravená datová sada obsahuje následující soubory: SUG_1KM, SUV_NUTS2, SUV_NUTS3, SUV_OBCE, SUV_STAT_OBVOD a SUV_ZSJ.</subtitle>
+
+    <!-- link na metadata služby ATOM (ISO 19139) -->
+	<link rel="describedby"
+		href="https://geoportal.czso.cz/csw/5fd8de5e-3dd8-40e3-9496-1411c0a80164"
+		type="application/xml"/>
+
+<!-- tady si nejsem jistý, co to má být (MD, ale v HTML?) -->
+	<link rel="describedby"
+		href="https://geoportal.czso.cz/csw/5fd8de5e-3dd8-40e3-9496-1411c0a80164" type="text/html"/>
+	<!-- I zde je nezbytná manuální úprava podle CSW enpointu -->
+
+<!-- link na Open search definiční file této služby -->
+	<link rel="search" href="https://geoportal.czso.cz/csw/5fd8de5e-3dd8-40e3-9496-1411c0a80164"
+		hreflang="cs" title="OpenSearch pro slyžbu ATOM Statistických jednotek ČSÚ" type="application/opensearchdescription+xml"/>
+	<!-- I zde je nezbytná manuální úprava podle CSW enpointu -->
+
+<!-- link sám na sebe, tedy na umístění tohoto atom feedu (může být vícejazyčné) -->
+	<link rel="self" href="https://geoportal.czso.cz/atom/5fd8de5e-3dd8-40e3-9496-1411c0a80164"
+		hreflang="cs" type="application/atom+xml" title="This document"/>
+	<!-- Zde je nutné aktualizovat URL podle toho, kde bude tento ATOM kanál vystaven a jaké ID bude přiděleno -->
+
+	<id>https://geoportal.czso.cz/atom/5fd8de5e-3dd8-40e3-9496-1411c0a80164</id><!-- persistentní identifikátor samotné služby-->
+	<!-- Zde je nutné aktualizovat URL podle toho, kde bude tento ATOM kanál vystaven -->
+
+	<rights type="html"><![CDATA[]]></rights><!-- oprávnění -->
+
+<!-- datum poslední aktualizace feedu -->
+	<updated>2022-10-12T14:55:00</updated>
+	<!-- Aktualizovat toto datum kdykoli, kdy jsou pomocí ETL generovány nové GML/JSON/... soubory pro publikaci pomocí tohoto ATOM kanálu -->
+
+	<!-- Následující údaje jsou statické a vyplnil jsem je podle diskuzí z předchozího tendru v roce 2020. Pro všechny případy doporučuji kontrolu zákazníkem, že v posledních dvou letech nedošlo ke změně. Poznámka, u ATOM kanálu jsou jako autoři uvedeni jak ČSÚ jako celek, tak i Petr Klauda jako administrátor. Jednotlivé položky ATOM kanálu (entry) mají uveden jen jeden kontakt - ČSÚ.  -->
+	<author>
+		<name>Český statistický úřad</name>
+		<email> infoservis@czso.cz </email>
+	</author>
+	<author>
+		<name>Petr Klauda</name>
+		<email>petr.klauda@czso.cz</email>
+	</author>
+	<!-- Konec statických údajů podle roku 2020 -->
+	
+	<!-- příklady konkréeních datových sad (entries) -->
+
+	<!-- Odtud začínají jednotlivé položky ATOM kanálu, tzv. entry. Každá entry odpovídá jedné fyzické reprezentaci datové sady, tj. publikovanému souboru.  -->
+	<entry>
+		<inspire_dls:spatial_dataset_identifier_code>https://czso.su.20110326/SUV_NUTS2</inspire_dls:spatial_dataset_identifier_code>
+		<!-- Identifikátor datové sady, obsahuje statickou část, kterou si musí ČSÚ definovat a dynamickou podle publikovaného souboru (v tomto případě SUV_NUTS2) -->
+
+		<inspire_dls:spatial_dataset_identifier_namespace>https://</inspire_dls:spatial_dataset_identifier_namespace>
+		<!-- Statický jmenný prostor datové sady -->
+
+		<category term="http://www.opengis.net/def/crs/EPSG/0/5514" label="S-JTSK 3.kvadrant (5514)"/>
+		<category term="http://www.opengis.net/def/crs/EPSG/0/4258" label="ETRS89 (4258) [INSPIRE]"/>
+		<category term="http://www.opengis.net/def/crs/EPSG/0/3035"
+			label="ETRS-LAEA (3035) [INSPIRE]"/>
+		<!-- Statická definice souřadnicových systémů datové sady definovaných podle INSPIRE. Tyto tři souřadnicové systémy jsou maximálním výčtem, obecně platí:
+			- pro vektorová data uvést EPSG 5514 a 4258,
+			- pro rastrová data (gridy) uvést EPSG 5514 a 3035.
+
+		Pro úplnost, S-JTSK INSPIRE nepožaduje, ale ČSÚ jej vždy přidávalo z důvodu uživatelské přívětivosti. -->
+
+		<author>
+			<!-- Statické, viz komentář výše -->
+			<name>Český statistický úřad</name>
+			<email>infoservis@czso.cz</email>
+		</author>
+
+		<id>https://geoportal.czso.cz/atom/czso-id-metadata-inspire-su-20110326/SUV_NUTS2?lang=cze</id>
+		<!-- Zde je nutné aktualizovat URL podle toho, kde bude tento ATOM kanál vystaven -->
+
+<!-- musí obsahovat odkaz na dataset atom feed -->
+		<link rel="alternate"
+			href="https://geoportal.czso.cz/atom/czso-id-metadata-inspire-su-20110326"
+			type="application/atom+xml" hreflang="en"
+			title="Feed containing the dataset in several formats"/>
+		<!-- Zde je nutné aktualizovat URL podle toho, kde bude tento ATOM kanál vystaven -->
+
+		<link rel="describedby"
+			href="https://geoportal.czso.cz/csw?Service=CSW&amp;request=GetRecordById&amp;version=2.0.2&amp;outputSchema=http://www.isotc211.org/2005/gmd&amp;id=czso-id-metadata-inspire-su-20110326#"
+			type="application/xml"/>
+		<!-- Zde je nezbytná manuální úprava URL podle CSW enpointu Geoportálu ČSÚ; všechny dané soubory (SUG_1KM, SUV_NUTS2, SUV_NUTS3, SUV_OBCE, SUV_STAT_OBVOD a SUV_ZSJ) odkazují na jeden metadatový záznam (XML soubor) v katalogu ČSÚ. -->
+
+		<published>2011-03-26T00:00:00</published>
+		<!-- Tato hodnota se změní až při zveřejnění dat Sčítání lidu z roku 2021, do té doby ji lze považovat za statickou. ČSÚ stanovuje tzv. rozhodné datum, které je referenční pro dané Sčítání.  -->
+
+		<rights>žádné podmínky neplatí</rights>
+		<!-- Statická hodnota podle číselníku INSPIRE -->
+
+		<summary type="html"
+			><![CDATA[Obyvatelstvo České republiky podle obvyklého pobytu vychází z dat Sčítání lidu, domu a bytů 2011. Data jsou dále dělena podle NUTS 2, tzv. regionů soudržnosti.<div>Metadata: <a href="https://geoportal.czso.cz/czso-id-metadata-inspire-su-20110326" target="_blank">HTML</a> <a href="https://geoportal.czso.cz/czso-id-metadata-inspire-su-20110326" title="ISO 19139" target="_blank">XML</a> <a href="https://geoportal.czso.cz/csw?service=CSW&amp;version=2.0.2&amp;request=GetRecordById&amp;outputSchema=http://www.w3.org/ns/dcat%23&amp;id=czso-id-metadata-inspire-su-20110326" title="INSPIRE GeoDCAT-AP RDF/XML" target="_blank">GeoDCAT</a></div>]]><!-- Zde je původní text ČSÚ na základě dosavadních diskuzí. Navrhuji, aby ČSÚ připravilo jednu větu/frázi o tom, jak jsou data dělena pro každý publikovaný soubor (SUG_1KM, SUV_NUTS2, SUV_NUTS3, SUV_OBCE, SUV_STAT_OBVOD a SUV_ZSJ).
+		-->
+		</summary>
+
+		<title>Statistické jednotky, harmonizované dle INSPIRE, NUTS 2 (regiony soudržnosti) -
+			vektor</title>
+		<!-- Dynamické, podle INSPIRE, viz výčet na konci tohoto entry -->
+
+		<updated>2022-10-12T14:55:00</updated>
+		<!-- Aktualizovat toto datum kdykoli, kdy jsou pomocí ETL generovány nové GML/JSON/... soubory pro publikaci pomocí tohoto ATOM kanálu, odpovídající této entry -->
+
+		<georss:polygon>11.99 48.25 11.99 51.25 18.91 51.25 18.91 48.25 11.99 48.25</georss:polygon>
+		<!-- Polygon, který definovala CENIA a ČSÚ společně. Doporučuji projednat se zákazníkem, jestli nechtějí polygon s více souřadnicemi, lépe vystihující tvar ČR. Na straně druhé, pro INSPIRE stačí i tato definice, i když minimalisticky, jedná se o polygon.  -->
+	</entry>
+
+	<!-- Zde mají následovat samostatné entry pro každý z následujících souborů (v závorce uvádím oficiální české ekvivalenty, které se mají objevit v tagu <title>; doporučuji provést kontrolu ze strany ČSÚ, jestli je to srozumitelné i pro ně; pamatuji si, že například preferovali "pohlaví" namísto INSPIRE termínu "rod"):
+
+SUG_1KM (Statistický grid s rozlišením 1 x 1 km),
+SUV_NUTS2 (NUTS 2 (regiony soudržnosti) - vektor),
+SUV_NUTS3 (NUTS3 (kraje) - vektor),
+SUV_OBCE (Obce - vektor),
+SUV_STAT_OBVOD (Statistické obvody - vektor)
+SUV_ZSJ (Základní sídelní jednotky - vektor)
+
+Ukázkově jsem níže (už bez komentářů) vyplnil příklad pro entry SUG_1KM. -->
+
+	<entry>
+		<inspire_dls:spatial_dataset_identifier_code>https://czso.pd.20110326/SUG_1KM</inspire_dls:spatial_dataset_identifier_code>
+		<inspire_dls:spatial_dataset_identifier_namespace>https://</inspire_dls:spatial_dataset_identifier_namespace>
+		<category term="http://www.opengis.net/def/crs/EPSG/0/5514" label="S-JTSK 3.kvadrant (5514)"/>
+		<category term="http://www.opengis.net/def/crs/EPSG/0/3035"
+			label="ETRS-LAEA (3035) [INSPIRE]"/>
+		<author>
+			<name>Český statistický úřad</name>
+			<email>infoservis@czso.cz</email>
+		</author>
+		<id>https://geoportal.czso.cz/atom/czso-id-metadata-inspire-su-20110326-SUG_1KM?lang=cze</id>
+		<link rel="alternate"
+			href="https://geoportal.czso.cz/atom/czso-id-metadata-inspire-su-20110326-SUG_1KM"
+			type="application/atom+xml" hreflang="en"
+			title="Feed containing the dataset in several formats"/>
+		<link rel="describedby"
+			href="https://geoportal.czso.cz/csw?Service=CSW&amp;request=GetRecordById&amp;version=2.0.2&amp;outputSchema=http://www.isotc211.org/2005/gmd&amp;id=czso-id-metadata-inspire-su-20110326#"
+			type="application/xml"/>
+		<published>2011-03-26T00:00:00</published>
+		<rights>žádné podmínky neplatí</rights>
+		<summary type="html"
+			><![CDATA[Obyvatelstvo České republiky podle obvyklého pobytu vychází z dat Sčítání lidu, domu a bytů 2011. Data jsou prezentována jako statistický grid s buňkou o rozměrech 1 x 1 km.<div>Metadata: <a href="https://geoportal.czso.cz/czso-id-metadata-inspire-su-20110326" target="_blank">HTML</a> <a href="https://geoportal.czso.cz/czso-id-metadata-inspire-su-20110326" title="ISO 19139" target="_blank">XML</a> <a href="https://geoportal.czso.cz/csw?service=CSW&amp;version=2.0.2&amp;request=GetRecordById&amp;outputSchema=http://www.w3.org/ns/dcat%23&amp;id=czso-id-metadata-inspire-su-20110326" title="INSPIRE GeoDCAT-AP RDF/XML" target="_blank">GeoDCAT</a></div>]]>
+		</summary>
+		<title>Statistické jednotky, harmonizované dle INSPIRE - Statistický grid s rozlišením 1 x 1
+			km</title>
+		<updated>2022-10-12T14:55:00</updated>
+		<georss:polygon>11.99 48.25 11.99 51.25 18.91 51.25 18.91 48.25 11.99 48.25</georss:polygon>
+	</entry>
+
+</feed>
