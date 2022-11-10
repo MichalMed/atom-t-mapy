@@ -25,16 +25,16 @@
 	<!-- I zde je nezbytná manuální úprava podle CSW enpointu -->
 
 <!-- link na Open search definiční file této služby -->
-	<link rel="search" href="https://geoportal.czso.cz/csw/5fd8de5e-3dd8-40e3-9496-1411c0a80164"
+	<link rel="search" href="http://localhost:8080/geonetwork/srv/eng/csw"
 		hreflang="cs" title="OpenSearch pro slyžbu ATOM Statistických jednotek ČSÚ" type="application/opensearchdescription+xml"/>
 	<!-- I zde je nezbytná manuální úprava podle CSW enpointu -->
 
 <!-- link sám na sebe, tedy na umístění tohoto atom feedu (může být vícejazyčné) -->
-	<link rel="self" href="https://geoportal.czso.cz/atom/5fd8de5e-3dd8-40e3-9496-1411c0a80164"
+	<link rel="self" href="https://github.com/MichalMed/atom-t-mapy/blob/main/service-feed/ATOM_INSPIRE_Statisticke_jednotky_main_feed.xml"
 		hreflang="cs" type="application/atom+xml" title="This document"/>
 	<!-- Zde je nutné aktualizovat URL podle toho, kde bude tento ATOM kanál vystaven a jaké ID bude přiděleno -->
 
-	<id>https://geoportal.czso.cz/atom/5fd8de5e-3dd8-40e3-9496-1411c0a80164</id><!-- persistentní identifikátor samotné služby-->
+	<id>https://github.com/MichalMed/atom-t-mapy/blob/main/service-feed/ATOM_INSPIRE_Statisticke_jednotky_main_feed.xml</id><!-- persistentní identifikátor samotné služby-->
 	<!-- Zde je nutné aktualizovat URL podle toho, kde bude tento ATOM kanál vystaven -->
 
 	<rights type="html"><![CDATA[]]></rights><!-- oprávnění -->
