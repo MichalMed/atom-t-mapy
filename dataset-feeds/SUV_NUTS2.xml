@@ -1,2 +1,72 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<feed xmlns="http://www.w3.org/2005/Atom" xmlns:georss="http://www.georss.org/georss" xmlns:inspire_dls="http://inspire.ec.europa.eu/schemas/inspire_dls/1.0" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xml:lang="cs"><id>https://atom.cuzk.cz/CP/datasetFeeds/CZ-00025712-CUZK_CP_648876.xml</id><title>INSPIRE - katastrální parcely - katastrální území: Hrutov [648876]</title><updated>2022-10-19T02:37:56+02:00</updated><author><name>Český úřad zeměměřický a katastrální</name><uri>http://geoportal.cuzk.cz</uri><email>cuzk.helpdesk@cuzk.cz</email></author><rights>žádné podmínky neplatí</rights><link href="https://atom.cuzk.cz/CP/CP.xml" hreflang="cs" rel="up" type="application/atom+xml"/><link href="http://inspire.ec.europa.eu/applicationschema/cp" hreflang="cs" rel="describedby" type="text/html"/><entry><id>https://services.cuzk.cz/gml/inspire/cp/epsg-5514/648876.zip</id><title>INSPIRE - katastrální parcely - katastrální území: Hrutov [648876]</title><updated>2022-10-19T02:37:55+02:00</updated><link href="https://services.cuzk.cz/gml/inspire/cp/epsg-5514/648876.zip" length="311908" rel="alternate" type="application/gml+xml" hreflang="cs"/><category label="S-JTSK" term="http://www.opengis.net/def/crs/EPSG/0/5514"/><georss:polygon> 49.2637 15.6974 49.2616 15.67 49.2423 15.6735 49.2445 15.701 49.2637 15.6974</georss:polygon></entry><entry><id>https://services.cuzk.cz/gml/inspire/cp/epsg-4258/648876.zip</id><title>INSPIRE - katastrální parcely - katastrální území: Hrutov [648876]</title><updated>2022-10-19T02:37:56+02:00</updated><link href="https://services.cuzk.cz/gml/inspire/cp/epsg-4258/648876.zip" length="292922" rel="alternate" type="application/gml+xml" hreflang="cs"/><category label="ETRS89" term="http://www.opengis.net/def/crs/EPSG/0/4258"/><georss:polygon> 49.2637 15.6974 49.2616 15.67 49.2423 15.6735 49.2445 15.701 49.2637 15.6974</georss:polygon></entry></feed>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:georss="http://www.georss.org/georss"
+    xmlns:inspire_dls="http://inspire.ec.europa.eu/schemas/inspire_dls/1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xml:lang="cs"
+    xsi:schemaLocation="http://www.w3.org/2005/Atom https://inspire-geoportal.ec.europa.eu/schemas/inspire/atom/1.0/atom.xsd">
+    <title>Statistické jednotky, harmonizované dle INSPIRE, NUTS 2 (regiony soudržnosti) - vektor</title>
+    <subtitle>INSPIRE ATOM stahovací služba Českého statistického úřadu pro statistické jednotky NUTS 2 (regiony soudržnosti)</subtitle>
+    
+    <!-- linky na typy prostorových objektů poskytované touto službou (?) -->
+    <!-- link ze specifikace neexistuje, možná tohle? -->    
+    <link href="https://inspire.ec.europa.eu/featureconcept/NUTSRegion" rel="describedBy" type="text/html"/>
+    
+    <!-- self reference -->
+    <link href="https://github.com/MichalMed/atom-t-mapy/blob/main/dataset-feeds/SUV_NUTS2.xml" rel="self" 
+        type="application/atom+xml" hreflang="cs" title="Odkaz na tento dokument"/>
+    
+    <!-- link na nadřazený service feed -->
+    <link href="https://github.com/MichalMed/atom-t-mapy/blob/main/service-feed/ATOM_INSPIRE_Statisticke_jednotky_main_feed.xml" rel="up" 
+        type="application/atom+xml" hreflang="cs" title="ATOM dokument nadřazené služby"/>
+          
+    <id>https://github.com/MichalMed/atom-t-mapy/blob/main/dataset-feeds/SUV_NUTS2.xml</id>
+    <rights>žádné podmínky neplatí</rights>
+    <updated>2022-11-10T20:58:56+02:00</updated>
+    <author>
+        <name>Český statistický úřad</name>
+        <email>infoservis@czso.cz</email>
+    </author>
+    
+    <entry>
+        <inspire_dls:spatial_dataset_identifier_code>5514/SUV_NUTS2</inspire_dls:spatial_dataset_identifier_code>
+        <inspire_dls:spatial_dataset_identifier_namespace>https://czso.su.20110326/</inspire_dls:spatial_dataset_identifier_namespace>
+        <category label="S-JTSK / Krovak East North" term="http://www.opengis.net/def/crs/EPSG/0/5514"/>
+        <id>https://czso.su.20110326/5514/SUV_NUTS2</id>
+        
+        <!-- link na dataset -->
+        <link href="https://czso.su.20110326/5514/SUV_NUTS2.gml" rel="alternate" type="application/gml+xml" hreflang="cs" length="123456"/>
+        <!-- musí odkazovat přímo na data, length je velikost v oktetech (bytech) -->
+        
+        <title>INSPIRE statistické jednotky - Regiony soudržnosti NUTS 2 v souřadnicovém referenčním systému S-JTSK</title>
+        <updated>2022-11-10T20:58:00+02:00</updated>
+        <georss:polygon>49.2637 15.6974 49.2616 15.67 49.2423 15.6735 49.2445 15.701 49.2637 15.6974</georss:polygon>
+    </entry>
+    <entry>
+        <inspire_dls:spatial_dataset_identifier_code>4258/SUV_NUTS2</inspire_dls:spatial_dataset_identifier_code>
+        <inspire_dls:spatial_dataset_identifier_namespace>https://czso.su.20110326/</inspire_dls:spatial_dataset_identifier_namespace>
+        <category label="ETRS89" term="http://www.opengis.net/def/crs/EPSG/0/4258"/>
+        <id>https://czso.su.20110326/4258/SUV_NUTS2</id>
+        
+        <!-- link na dataset -->
+        <link href="https://czso.su.20110326/4258/SUV_NUTS2.gml" rel="alternate" type="application/gml+xml" hreflang="cs" length="123456"/>
+        <!-- musí odkazovat přímo na data, length je velikost v oktetech (bytech) -->
+        
+        <title>INSPIRE statistické jednotky - Regiony soudržnosti NUTS 2 v souřadnicovém referenčním systému ETRS89</title>
+        <updated>2022-11-10T20:58:00+02:00</updated>
+        <georss:polygon>49.2637 15.6974 49.2616 15.67 49.2423 15.6735 49.2445 15.701 49.2637 15.6974</georss:polygon>
+    </entry>    
+    <entry>
+        <inspire_dls:spatial_dataset_identifier_code>3035/SUV_NUTS2</inspire_dls:spatial_dataset_identifier_code>
+        <inspire_dls:spatial_dataset_identifier_namespace>https://czso.su.20110326/</inspire_dls:spatial_dataset_identifier_namespace>
+        <category label="ETRS89-extended / LAEA Europe" term="http://www.opengis.net/def/crs/EPSG/0/3035"/>
+        <id>https://czso.su.20110326/3035/SUV_NUTS2</id>
+        
+        <!-- link na dataset -->
+        <link href="https://czso.su.20110326/3035/SUV_NUTS2.gml" rel="alternate" type="application/gml+xml" hreflang="cs" length="123456"/>
+        <!-- musí odkazovat přímo na data, length je velikost v oktetech (bytech) -->
+        
+        <title>INSPIRE statistické jednotky - Regiony soudržnosti NUTS 2 v souřadnicovém referenčním systému ETRS89-extended / LAEA Europe</title>
+        <updated>2022-11-10T20:58:00+02:00</updated>
+        <georss:polygon>49.2637 15.6974 49.2616 15.67 49.2423 15.6735 49.2445 15.701 49.2637 15.6974</georss:polygon>
+    </entry>
+</feed>
